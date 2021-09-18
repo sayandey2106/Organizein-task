@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            background: #F2F2F2;
+            color: #7F7F7F;
+        }
+        
+        .top {
+            margin-bottom: 60px;
+            padding-top: 20px;
+            text-align: center;
+            margin-left: 30px;
+        }
+        
+        .top .to-box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .top .to-box .left {
+            border-radius: 50%;
+        }
+        
+        .top .to-box .right {
+            margin-left: 5px;
+        }
+        
+        .top .to-box .right p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+            color: #7F7F7F;
+        }
+        
+        .middle {
+            text-align: center;
+        }
+        
+        .middle .middle-top {
+            margin-bottom: 80px;
+        }
+        
+        .middle .middle-top h2 {
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0;
+        }
+        
+        .middle .middle-top p {
+            font-size: 12px;
+            font-weight: 400;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 {
+            position: relative;
+            z-index: 1;
+            width: 670px;
+            margin: 0 auto;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1:before {
+            position: absolute;
+            left: 20px;
+            width: 630px;
+            height: 100%;
+            content: "";
+            background-color: #ffffff;
+            bottom: -20px;
+            z-index: 1;
+            border-radius: 30px;
+            -webkit-box-shadow: 0 4px 6px -6px #222;
+            -moz-box-shadow: 0 4px 6px -6px #222;
+            box-shadow: 0 4px 6px -6px #222;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1::before {
+            position: absolute;
+            left: 40px;
+            width: 590px;
+            height: 100%;
+            content: "";
+            background-color: #ffffff;
+            bottom: -29px;
+            z-index: -1;
+            border-radius: 30px;
+            -webkit-box-shadow: 0 2px 6px -6px rgba(34, 34, 34, 0.7);
+            -moz-box-shadow: 0 2px 6px -6px rgba(34, 34, 34, 0.7);
+            box-shadow: 0 2px 6px -6px rgba(34, 34, 34, 0.7);
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 {
+            position: relative;
+            z-index: 2;
+            width: 670px;
+            margin: 0 auto;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 {
+            position: relative;
+            z-index: 3;
+            width: 670px;
+            margin: 0 auto;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box {
+            border: 1px solid #FFC000;
+            border-radius: 30px;
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.075);
+            -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.075);
+            -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.075);
+            width: 670px;
+            margin: 0 auto;
+            height: 460px;
+            background-color: #ffffff;
+            z-index: 999;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .topimage {
+            width: 170px;
+            height: 170px;
+            border: 2px solid #FFC000;
+            border-radius: 50%;
+            position: relative;
+            margin: -65px auto 0 auto;
+            background-color: #ffffff;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .topimage img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            content: "";
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .message {
+            position: relative;
+            width: 55px;
+            height: 55px;
+            margin: 30px auto 0 auto;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .message a {
+            text-decoration: none;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .message .online {
+            position: absolute;
+            /* background-color: #92D050; */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            left: 30px;
+            top: 14px;
+            content: "";
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .box-para {
+            max-width: 400px;
+            margin: 0 auto;
+            font-size: 18px;
+            text-align: left;
+            margin-top: 30px;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            padding-top: 100px;
+            padding-right: 15px;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .bottom p {
+            text-align: right;
+            font-size: 18px;
+            font-style: italic;
+            margin: 0 15px 0 0;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .bottom a {
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 0 7px;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .bottom a i {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .bottom .mfacebook {
+            color: #3B5999;
+            border: 1px solid #3B5999;
+            padding: 10px;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .bottom .insta {
+            color: #211D1F;
+            border: 1px solid #211D1F;
+            padding: 10px;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-wrapper2 .box-shadow-wrapper3 .box .bottom .twitar {
+            color: #28AAE1;
+            border: 1px solid #28AAE1;
+            padding: 10px;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-1 {
+            content: "";
+            position: absolute;
+            left: 25px;
+            width: 620px;
+            height: 200px;
+            bottom: -20px;
+            border-radius: 30px;
+            -webkit-box-shadow: 0 3px 6px -6px rgba(34, 34, 34, 0.7);
+            -moz-box-shadow: 0 3px 6px -6px rgba(34, 34, 34, 0.7);
+            box-shadow: 0 3px 6px -6px rgba(34, 34, 34, 0.7);
+            z-index: 1;
+            background-color: #ffffff;
+        }
+        
+        .middle .middle-inner .box-shadow-wrappe1 .box-shadow-1::before {
+            content: "";
+            position: absolute;
+            left: -15px;
+            width: 650px;
+            height: 200px;
+            bottom: 10px;
+            border-radius: 30px;
+            -webkit-box-shadow: 0 3px 6px -6px rgba(34, 34, 34, 0.7);
+            -moz-box-shadow: 0 3px 6px -6px rgba(34, 34, 34, 0.7);
+            box-shadow: 0 3px 6px -6px rgba(34, 34, 34, 0.7);
+            z-index: -1;
+            background-color: #ffffff;
+        }
+        
+        .middle .middle-inner .note {
+            font-size: 11px;
+            font-style: italic;
+            max-width: 525px;
+            margin: 40px auto 0 auto;
+        }
+        
+        .down {
+            margin-top: 200px;
+        }
+        
+        .down .down-top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #707070;
+            padding-bottom: 10px;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        
+        .down .down-top .left p {
+            font-size: 18px;
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        .down .down-top .right .box-down {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+            width: 280px;
+            background-color: #F5F5F8;
+        }
+        
+        .down .down-top .right .box-down .left-down {
+            margin-right: 10px;
+        }
+        
+        .down .down-top .right .box-down .left-down .down-img {
+            width: 50px;
+            height: 50px;
+            /* background-color: #ffffff; */
+            position: relative;
+            border-radius: 50%;
+        }
+        
+        .down .down-top .right .box-down .left-down .down-img img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            content: "";
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+        }
+        
+        .down .down-top .right .box-down .right-down {
+            /* background-color: #F5F5F8; */
+        }
+        
+        .down .down-top .right .box-down .right-down p {
+            margin: 0;
+            color: #1C1C1F;
+            font-weight: 500;
+        }
+        
+        .down .down-top .right .box-down .right-down a {
+            color: #3278D2;
+        }
+        
+        .footer {
+            margin-top: 20px;
+        }
+        
+        .footer p {
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .footer p a {
+            color: #7F7F7F;
+            padding-left: 5px;
+        }
+        
+        .fab {
+            font-size: 30px !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="container">
+            <div class="to-box">
+                <div class="left">
+                    <img src="sai.jpg" width="50px" height="50px" alt="image" style="border-radius: 50% ;margin-left: 20px; margin-right: 10px;">
+                </div>
+                <div class=" right ">
+                    <p>BoloSai</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="middle ">
+        <div class="container ">
+            <div class="middle-top ">
+                <h2>Positive Sai Message</h2>
+                <p>Shraddha aur saburi</p>
+            </div>
+            <div class="middle-inner ">
+                <div class="box-shadow-wrappe1 ">
+                    <div class="box-shadow-wrapper2 ">
+                        <div class="box-shadow-wrapper3 ">
+                            <div class="box box-border ">
+
+                                <div class="topimage ">
+                                    <img src="sai.jpg " alt=" ">
+                                </div>
+                                <div class="message ">
+                                    <a href="# "><i class="far fa-edit" style="color: grey !important;"></i></a>
+                                    <div class="online "></div>
+                                </div>
+
+                                <p class="box-para ">Your Desires are not your Problems... Baba solves your Problems here... For your Wishes & Desires, Please Contact SaiBaba Directly...
+                                </p>
+
+                                <div class="bottom ">
+                                    <p>Share it on</p>
+                                    <a href="# " class="mfacebook "><i class="fab fa-facebook-f"></i></a>
+                                    <a href="# " class="insta "><i class="fab fa-instagram"></i></a>
+                                    <a href="# " class="twitar "><i class="fab fa-twitter"></i></a>
+                                </div>
+
+                            </div>
+                            <div class="box-shadow-3 "></div>
+                        </div>
+                        <div class="box-shadow-2 "></div>
+                    </div>
+                    <div class="box-shadow-1 "></div>
+                </div>
+
+                <p class="note ">Note: All the quotes here are referred from Shirdi Sai Baba’s sayings, books, movies and online contents, these are inspired contents, we are showing Each quote loads automatically every quote gives us a positive hope.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="down ">
+        <div class="container ">
+            <div class="down-top ">
+                <div class="left ">
+                    <p>View Miracles</p>
+                </div>
+                <div class="right ">
+                    <div class="box-down ">
+                        <div class="left-down ">
+                            <div class="down-img ">
+                                <img src="u1.jpg " alt=" " style="border-radius: 50%;">
+                            </div>
+                        </div>
+                        <div class="right-down ">
+                            <p>You experienced Miracles?</p>
+                            <a href="# ">Share it with Community</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer ">
+        <div class="container ">
+            <p>This website is completely dedicated to Shirdi Saibaba & is meant to spread his message.. and to help everyone find answers to their problems <a href="# ">Support</a>
+            </p>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
